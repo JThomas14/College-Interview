@@ -1,17 +1,24 @@
 doctype html
 html 
   head
+
+    script(type='text/javascript' src='/javascripts/misc.js')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(type='text/javascript', src='https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2/tsparticles.preset.links.min.js')
+    script(src='https://cdn.jsdelivr.net/npm/tsparticles-engine')
+    script(src='https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.3.js')
+    script(src='https://cdn.jsdelivr.net/npm/jquery-particles')
+
+
     meta(name='description' content='')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(href='https://fonts.googleapis.com/css?family=Montserrat:500&display=swap' rel='stylesheet')
   header
     a.logo(href='/')
-      img(src='images/logo.svg' alt='logo')
+      img(src='images/logo.png' alt='logo' width='140px' height='70px')
     nav
       ul.nav__links
         li
@@ -20,7 +27,7 @@ html
           a(href='#') Projects
         li
           a(href='#') About
-    a.cta(href='#') Contact
+    a.cta(href='/login') Login 
     p.menu.cta Menu
   #mobile__menu.overlay
     a.close &times;
@@ -28,7 +35,14 @@ html
       a(href='#') Services
       a(href='#') Projects
       a(href='#') About
-  script(type='text/javascript' src='mobile.js')
+  
+
+
 
   body 
+    #loader 
+    #loader-background
+    .tsparticles
+      script(type='text/javascript' src='/javascripts/app.js') 
+    script(type='text/javascript' src='/javascripts/mobile.js')
     block content 

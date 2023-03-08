@@ -10,6 +10,7 @@ header {
   align-items: center;
   padding: 30px 10%;
   background-color: #24252a;
+  z-index: 3;
 }
 
 .logo {
@@ -20,6 +21,7 @@ header {
 
 nav {
   order: 1;
+  z-index: 3;
 }
 
 .nav__links a,
@@ -53,11 +55,16 @@ nav {
   color: #0088a9;
 }
 
+.a.logo:hover {
+  color: #0088a9;
+}
+
+
 .cta {
   order: 2;
   margin-left: 20px;
   padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
+  background-color: #05726a;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -136,4 +143,139 @@ nav {
   .menu {
     display: initial;
   }
+}
+
+.tsparticles
+
+{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/background.jpg");
+  background-color: black;
+  background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #0088a9cc;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#loader-background {
+  width: 100%;
+  height: 100%;
+  position:fixed;
+  padding:0;
+  margin:0;
+
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100vh;
+  background:rgb(255, 255, 255);
+  z-index: 1;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.login{
+  width: 382px;
+  overflow: hidden;
+  margin: auto;
+  margin: 20 0 0 1000px;
+  padding: 40px;
+  background: #24252A;
+  border-radius: 15px ;
+  justify-content: center;
+}
+.wholepage {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+
+}
+
+.wholepage span{
+  color: white;
+  font-size: 17px;
+}
+.wholepage a{
+  float: left;
+  color: white;
+}
+h1{
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #05726a;
+  padding: 20px;
+}
+h2{
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #05726a;
+  padding: 20px;
+}
+pre {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #05726a;
+  padding: 20px;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #05726a;
+  padding: 20px;
+}
+.wholepage label{
+  color: #05726a;
+  font-size: 17px;
+}
+#Uname{
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+#Pass{
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+#log{
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 17px;
+  padding-left: 7px;
+  background-color: #05726a;
+  color: #edf0f1;
+
+}
+
+#log:hover {
+  background-color: #edf0f1;
+  color: #05726a;
+  transition: 0.3s;
 }

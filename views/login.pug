@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  .wholepage
+    h2 Login Page
+    br
+    .login
+      form#login(method='post' action='/logindetails')
+        label
+          b
+            | User Name
+        input#Uname(type='text' name='Uname' placeholder='Username')
+        br
+        br
+        br
+        br
+        br
+        label
+          b
+            | Password
+        input#Pass(type='Password' name='Pass' placeholder='Password')
+        br
+        br
+        br
+        br
+        br
+        input#log(type='submit' name='log' value='Login')
+        br
+        br
+        input#check(type='checkbox')
+        span Remember me
+        br
+        br
+        a(href="/signup") Sign up 
