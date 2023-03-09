@@ -2,7 +2,7 @@ doctype html
 html 
   head
 
-    script(type='text/javascript' src='/javascripts/misc.js')
+    
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     title= title
@@ -11,23 +11,24 @@ html
     script(src='https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js')
     script(src='https://code.jquery.com/jquery-3.6.3.js')
     script(src='https://cdn.jsdelivr.net/npm/jquery-particles')
-
+    script(src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript")
+    
 
     meta(name='description' content='')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(href='https://fonts.googleapis.com/css?family=Montserrat:500&display=swap' rel='stylesheet')
   header
     a.logo(href='/')
-      img(src='images/logo.png' alt='logo' width='140px' height='70px')
+      img(src='images/logo.svg' alt='logo' width='160px' height='70px')
     nav
       ul.nav__links
         li
-          a(href='#') Services
+          a(href='https://github.com/JayT13/Interview') Github
         li
           a(href='#') Projects
         li
           a(href='#') About
-    a.cta(href='/login') Login 
+    a.cta(href= '/'+ State) #{State} 
     p.menu.cta Menu
   #mobile__menu.overlay
     a.close &times;
@@ -42,7 +43,11 @@ html
   body 
     #loader 
     #loader-background
-    .tsparticles
-      script(type='text/javascript' src='/javascripts/app.js') 
+    
     script(type='text/javascript' src='/javascripts/mobile.js')
+    #tsparticles
+    #background 
+    script(type='text/javascript' src='/javascripts/app.js') 
     block content 
+    
+    script(type='text/javascript' src='/javascripts/misc.js')

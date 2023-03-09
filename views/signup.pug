@@ -8,8 +8,8 @@ block content
     br
     br
     .login
-      h3 Login Page
-      form#login(method='post' action='/logindetails')
+      h3 Sign-up Page
+      form#login(method='post' action='/signupdetails')
         br
         label
           b
@@ -31,11 +31,11 @@ block content
         br
         br
         br
-        input#log(type='submit' name='log' value='Login')
+        input#log(type='submit' name='log' value='Sign up')
         br
         br
-        a(href="/signup") Sign up
+        a(href="/login") Login
         if failed
           br
           br 
-          p1 #{failed} 
+          p1 #{failed}

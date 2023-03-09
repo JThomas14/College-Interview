@@ -1,15 +1,10 @@
 $(document).ready(async function () {
   await loadFull(tsParticles);
 
-  $(".tsparticles")
+  $("#tsparticles")
       .particles()
       .init(
           {
-              background: {
-                  color: {
-                      value: "#0d47a1",
-                  },
-              },
               fpsLimit: 120,
               interactivity: {
                   events: {
@@ -53,8 +48,8 @@ $(document).ready(async function () {
                       outModes: {
                           default: "bounce",
                       },
-                      random: false,
-                      speed: 6,
+                      random: true,
+                      speed: 2,
                       straight: false,
                   },
                   number: {
@@ -65,7 +60,7 @@ $(document).ready(async function () {
                       value: 80,
                   },
                   opacity: {
-                      value: 0.5,
+                      value: 0.4,
                   },
                   shape: {
                       type: "circle",
@@ -84,10 +79,5 @@ $(document).ready(async function () {
 
   // or
 
-  $(".tsparticles")
-      .particles()
-      .ajax("./particles.json", function (container) {
-          // container is the particles container where you can play/pause or stop/start.
-          // the container is already started, you don't need to start it manually.
-      });
+
 });

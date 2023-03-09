@@ -10,3 +10,26 @@ document.onreadystatechange = function() {
         
     }
 };
+
+function callbackFunc(entries, observer)
+{
+  entries.forEach(entry => {
+    if (entry.isIntersecting == true) {
+        entry.target.classList.add("AfterScroll");
+    } else {
+        entry.target.classList.remove("AfterScroll");
+    }
+  });
+}
+
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.7
+  };
+
+let observer = new IntersectionObserver(callbackFunc, options);
+
+document.querySelectorAll("#LoadOnScroll").forEach(element => {
+    observer.observe(element)
+});
