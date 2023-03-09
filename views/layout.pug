@@ -19,26 +19,29 @@ html
     link(href='https://fonts.googleapis.com/css?family=Montserrat:500&display=swap' rel='stylesheet')
   header
     a.logo(href='/')
-      img(src='images/logo.svg' alt='logo' width='160px' height='70px')
+      img(src='images/logo.svg' alt='logo' width='100px' height='100px')
     nav
       ul.nav__links
+        li
+          a(href='https://www.facebook.com/littlefarmscotland') Facebook 
         li
           a(href='https://github.com/JThomas14/College-Interview') Github
         li
           a(href='/') Home 
         li
-          a(href='#') About
+          a(href='./#About') About
+        li 
+          a(href='/Photos') Photos
     a.cta(href= '/'+ State) #{State} 
     p.menu.cta Menu
   #mobile__menu.overlay
     a.close &times;
     .overlay__content
+      a(href='https://www.facebook.com/littlefarmscotland') Facebook 
       a(href='https://github.com/JThomas14/College-Interview') Github
       a(href='/') Home 
-      a(href='#') About
-  
-
-
+      a(href='./#About') About
+      a(href='/Photos') Photos
 
   body 
     #loader 

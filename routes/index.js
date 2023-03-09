@@ -15,7 +15,14 @@ var GetUserWithSessionID = Util.GetUserWithSessionID
 router.get('/', async function(req, res, next) {
   await GetUserWithSessionID(req.cookies.SessionID).then(function(User){
     if (User == false) {res.redirect('/login'); return}
-    res.render('index', { title: 'College Interview', State: 'Logout', User});
+    res.render('index', { title: 'Little Farm on the Hill', State: 'Logout', User});
+  })
+});
+
+router.get('/Photos', async function(req, res, next) {
+  await GetUserWithSessionID(req.cookies.SessionID).then(function(User){
+    if (User == false) {res.redirect('/login'); return}
+    res.render('photos', { title: 'Little Farm on the Hill', State: 'Logout', User});
   })
 });
 

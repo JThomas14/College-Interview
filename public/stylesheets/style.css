@@ -298,3 +298,43 @@ p1 {
   opacity: 1 !important;
   transition: 1s;
 }
+
+
+
+
+
+.image-grid div {
+  width: 25%;
+  height: 240px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.image01 { background-image: url('/images/1.jpg'); }
+.image02 { background-image: url('/images/2.jpg'); }
+.image03 { background-image: url('/images/3.jpg'); }
+.image05 { background-image: url('/images/4.jpg'); }
+.image04 { background-image: url('/images/5.jpg'); }
+.image06 { background-image: url('/images/6.jpg'); }
+.image07 { background-image: url('/images/7.jpg'); }
+.image08 { background-image: url('/images/8.jpg'); }
+.image09 { background-image: url('/images/9.jpg'); }
+.image10 { background-image: url('/images/10.jpg'); }
+.image11 { background-image: url('/images/11.jpg'); }
+.image12 { background-image: url('/images/12.jpg'); }
+
+@media screen and (max-width: 400px) {
+  .image-grid {
+    flex-direction: column;
+    flex-wrap: no-wrap;
+  }
+  .image-grid div { width: 100%; }
+}
