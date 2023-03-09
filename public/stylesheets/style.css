@@ -296,5 +296,5 @@ p1 {
 }
 .AfterScroll {
   opacity: 1 !important;
-  transition: 2s;
+  transition: 1s;
 }
